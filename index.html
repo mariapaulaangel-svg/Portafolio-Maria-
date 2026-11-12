@@ -8,7 +8,7 @@
 
     <title>Portafolio | María Paula</title>
 
-    <meta name="description" content="Portafolio de María Paula, estudiante de Diseño Gráfico. Explora mis proyectos, ilustraciones y propuestas visuales.">
+    <meta name="description" content="Portafolio de María Paula, estudiante de Diseño Gráfico. Explora mis proyectos y propuestas visuales.">
 
     <link rel="stylesheet" href="./styles.css">
 
@@ -20,7 +20,7 @@
     <!-- ENCABEZADO -->
     <header class="encabezado" id="inicio">
 
-        <a href="#inicio" class="logo" aria-label="Ir al inicio del portafolio">
+        <a href="#inicio" class="logo" aria-label="Ir al inicio">
             <span>Portafolio</span>
             <small>María Paula</small>
         </a>
@@ -35,187 +35,183 @@
         </button>
 
         <nav class="menu" id="menu-principal" aria-label="Navegación principal">
+
             <a href="#inicio">Inicio</a>
-            <a href="proyectos.html">Proyectos</a>
+            <a href="#proyectos">Proyectos</a>
             <a href="#contacto">Contacto</a>
+
         </nav>
 
     </header>
 
 
-    <!-- PORTADA -->
     <main>
 
-    <section class="portada" aria-label="Presentación del portafolio">
+        <!-- PORTADA -->
+        <section class="portada">
 
-        <div class="decoracion estrella naranja" aria-hidden="true">✹</div>
-        <div class="decoracion estrella rosa" aria-hidden="true">✳</div>
+            <div class="decoracion estrella naranja" aria-hidden="true">✹</div>
+            <div class="decoracion estrella rosa" aria-hidden="true">✳</div>
 
-        <div class="titulo-portada">
-            <h1>
-                PORTA<br>
-                FOLIO
-            </h1>
+            <div class="titulo-portada">
 
-            <p>Diseño, creatividad e ideas.</p>
-        </div>
+                <h1>
+                    PORTA<br>
+                    FOLIO
+                </h1>
 
-        <div class="personaje">
+                <p>Diseño, creatividad e ideas.</p>
 
-            <img src="avatar.jpg"
-                 alt="Ilustración de presentación de María Paula">
-
-            <div class="tarjeta-hola">
-                <span>Hola, soy</span>
-                <strong>María Paula</strong>
             </div>
 
-        </div>
+            <div class="personaje">
 
-        <div class="sticker" aria-hidden="true">✿</div>
+                <img src="avatar.jpg"
+                     alt="Ilustración de María Paula">
 
-    </section>
+                <div class="tarjeta-hola">
+                    <span>Hola, soy</span>
+                    <strong>María Paula</strong>
+                </div>
 
+            </div>
 
-    <!-- SOBRE MÍ -->
-    <section class="sobre-mi" aria-labelledby="titulo-sobre-mi">
+            <div class="sticker" aria-hidden="true">✿</div>
 
-        <div class="texto-sobre-mi">
-
-            <h2 id="titulo-sobre-mi">Un poquito sobre mí</h2>
-
-            <p>
-                Soy estudiante de sexto semestre de
-                <strong>Diseño Gráfico</strong> en la Universidad del Valle
-                y oriunda de Neiva, Huila.
-                Me apasiona todo lo relacionado con la
-                <strong>creación de propuestas visuales</strong>
-                que comuniquen, conecten y transmitan ideas
-                de manera creativa.
-            </p>
-
-            <p>
-                Disfruto especialmente la ilustración, el branding,
-                el marketing digital y el desarrollo de piezas
-                gráficas para diferentes medios.
-            </p>
-
-            <p>
-                Cada proyecto representa para mí una oportunidad
-                de aprender, explorar nuevas ideas y seguir
-                creciendo como diseñadora.
-                Mi mayor motivación es dedicarme a lo que amo,
-                dando siempre lo mejor de mí en cada proceso,
-                con el apoyo de mi familia.
-            </p>
-
-        </div>
-
-        <div class="foto-sobre-mi">
-
-            <span class="estrella-foto" aria-hidden="true">✹</span>
-
-            <img src="proyecto 2.png"
-                 alt="Fotografía personal de María Paula">
-
-        </div>
-
-    </section>
+        </section>
 
 
-    <!-- PROYECTOS DESTACADOS -->
-    <section class="proyectos" aria-labelledby="titulo-proyectos">
+        <!-- SOBRE MÍ -->
+        <section class="sobre-mi" aria-labelledby="titulo-sobre-mi">
 
-        <h2 id="titulo-proyectos">PROYECTOS</h2>
+            <div class="texto-sobre-mi">
 
-        <div class="contenedor-proyectos">
+                <h2 id="titulo-sobre-mi">Un poquito sobre mí</h2>
 
-            <a href="proyectos.html"
-               class="proyecto pequeño"
-               aria-label="Ver el proyecto uno">
+                <p>
+                    Soy estudiante de sexto semestre de
+                    <strong>Diseño Gráfico</strong> en la Universidad del Valle
+                    y oriunda de Neiva, Huila.
+                    Me apasiona todo lo relacionado con la
+                    <strong>creación de propuestas visuales</strong>
+                    que comuniquen, conecten y transmitan ideas
+                    de manera creativa.
+                </p>
 
-                <img src="proyecto1.png"
-                     alt="Imagen del primer proyecto de diseño">
+                <p>
+                    Disfruto especialmente la ilustración, el branding,
+                    el marketing digital y el desarrollo de piezas
+                    gráficas para diferentes medios.
+                </p>
 
+                <p>
+                    Cada proyecto representa para mí una oportunidad
+                    de aprender, explorar nuevas ideas y seguir
+                    creciendo como diseñadora.
+                    Mi mayor motivación es dedicarme a lo que amo,
+                    dando siempre lo mejor de mí en cada proceso,
+                    con el apoyo de mi familia.
+                </p>
+
+            </div>
+
+            <div class="foto-sobre-mi">
+
+                <span class="estrella-foto" aria-hidden="true">✹</span>
+
+                <img src="proyecto 2.png"
+                     alt="Fotografía personal de María Paula">
+
+            </div>
+
+        </section>
+
+
+        <!-- PROYECTOS -->
+        <section class="proyectos"
+                 id="proyectos"
+                 aria-labelledby="titulo-proyectos">
+
+            <h2 id="titulo-proyectos">PROYECTOS</h2>
+
+            <div class="contenedor-proyectos">
+
+                <div class="proyecto pequeño">
+
+                    <img src="proyecto1.png"
+                         alt="Primer proyecto de diseño gráfico">
+
+                </div>
+
+                <div class="proyecto grande">
+
+                    <img src="proyecto2.png"
+                         alt="Segundo proyecto de diseño gráfico">
+
+                </div>
+
+                <div class="proyecto pequeño">
+
+                    <img src="proyecto 3.png"
+                         alt="Tercer proyecto de diseño gráfico">
+
+                </div>
+
+            </div>
+
+            <a href="#proyectos" class="boton-vermas">
+                Ver más
             </a>
 
-            <a href="proyectos.html"
-               class="proyecto grande"
-               aria-label="Ver el proyecto dos">
-
-                <img src="proyecto2.png"
-                     alt="Imagen del segundo proyecto de diseño">
-
-            </a>
-
-            <a href="proyectos.html"
-               class="proyecto pequeño"
-               aria-label="Ver el proyecto tres">
-
-                <img src="proyecto 3.png"
-                     alt="Imagen del tercer proyecto de diseño">
-
-            </a>
-
-        </div>
-
-        <a href="proyectos.html"
-           class="boton-vermas"
-           aria-label="Ver todos los proyectos">
-
-            Ver más
-
-        </a>
-
-    </section>
+        </section>
 
 
-    <!-- CONTACTO -->
-    <section class="contacto"
-             id="contacto"
-             aria-labelledby="titulo-contacto">
+        <!-- CONTACTO -->
+        <section class="contacto"
+                 id="contacto"
+                 aria-labelledby="titulo-contacto">
 
-        <img class="avatar-contacto"
-             src="contacto.png"
-             alt="Ilustración de María Paula en la sección de contacto">
+            <img class="avatar-contacto"
+                 src="contacto.png"
+                 alt="Avatar de María Paula">
 
-        <div class="contenido-contacto">
+            <div class="contenido-contacto">
 
-            <h2 id="titulo-contacto">CONTACTO</h2>
+                <h2 id="titulo-contacto">CONTACTO</h2>
 
-            <a href="https://www.instagram.com/mapu_1503_/"
-               target="_blank"
-               rel="noopener noreferrer"
-               aria-label="Visitar perfil de Instagram de María Paula">
+                <a href="https://www.instagram.com/mapu_1503_/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Visitar mi Instagram">
 
-                <span class="icono" aria-hidden="true">◎</span>
-                <span>mapu_1503_</span>
+                    <span class="icono" aria-hidden="true">◎</span>
+                    <span>mapu_1503_</span>
 
-            </a>
+                </a>
 
-            <a href="mailto:angeltrianamariapaula@gmail.com"
-               aria-label="Enviar un correo electrónico a María Paula">
+                <a href="mailto:angeltrianamariapaula@gmail.com"
+                   aria-label="Enviarme un correo electrónico">
 
-                <span class="icono" aria-hidden="true">✉</span>
-                <span>angeltrianamariapaula@gmail.com</span>
+                    <span class="icono" aria-hidden="true">✉</span>
+                    <span>angeltrianamariapaula@gmail.com</span>
 
-            </a>
+                </a>
 
-            <a href="https://w.app/y6rzbh"
-               target="_blank"
-               rel="noopener noreferrer"
-               aria-label="Contactar a María Paula por WhatsApp">
+                <a href="https://w.app/y6rzbh"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="Contactarme por WhatsApp">
 
-                <span class="icono" aria-hidden="true">◉</span>
-                <span>3166875227</span>
+                    <span class="icono" aria-hidden="true">◉</span>
+                    <span>3166875227</span>
 
-            </a>
+                </a>
 
-        </div>
+            </div>
 
-        <span class="estrella-contacto" aria-hidden="true">✹</span>
+            <span class="estrella-contacto" aria-hidden="true">✹</span>
 
-    </section>
+        </section>
 
     </main>
 
@@ -232,7 +228,8 @@
                rel="noopener noreferrer"
                aria-label="Instagram de María Paula">
 
-                ◎
+                <span aria-hidden="true">◎</span>
+                <span>Instagram</span>
 
             </a>
 
@@ -241,7 +238,8 @@
                rel="noopener noreferrer"
                aria-label="WhatsApp de María Paula">
 
-                ◉
+                <span aria-hidden="true">◉</span>
+                <span>WhatsApp</span>
 
             </a>
 
@@ -249,8 +247,54 @@
 
     </footer>
 
+
+    <!-- FUNCIONAMIENTO DEL MENÚ -->
+    <script>
+
+        const botonMenu = document.querySelector('.menu-toggle');
+        const menu = document.querySelector('.menu');
+
+        botonMenu.addEventListener('click', function () {
+
+            const abierto = menu.classList.toggle('activo');
+
+            botonMenu.setAttribute('aria-expanded', abierto);
+
+            botonMenu.setAttribute(
+                'aria-label',
+                abierto
+                    ? 'Cerrar menú de navegación'
+                    : 'Abrir menú de navegación'
+            );
+
+        });
+
+        // Cerrar menú al seleccionar una sección
+
+        const enlacesMenu = menu.querySelectorAll('a');
+
+        enlacesMenu.forEach(function (enlace) {
+
+            enlace.addEventListener('click', function () {
+
+                menu.classList.remove('activo');
+
+                botonMenu.setAttribute('aria-expanded', 'false');
+
+                botonMenu.setAttribute(
+                    'aria-label',
+                    'Abrir menú de navegación'
+                );
+
+            });
+
+        });
+
+    </script>
+
 </body>
 </html>
+
 
 
         </div>
