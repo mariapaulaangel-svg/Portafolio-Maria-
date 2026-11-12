@@ -49,8 +49,6 @@ button {
     cursor: pointer;
 }
 
-/* ACCESIBILIDAD: ENFOQUE CON TECLADO */
-
 a:focus-visible,
 button:focus-visible {
     outline: 3px solid var(--morado);
@@ -95,7 +93,7 @@ button:focus-visible {
 
 .menu a {
     background: var(--rosa);
-    color: var(--blanco);
+    color: white;
     padding: 10px 28px;
     border-radius: 40px;
     font-family: 'Fredoka', sans-serif;
@@ -117,7 +115,7 @@ button:focus-visible {
 ========================================= */
 
 .portada {
-    min-height: 440px;
+    min-height: 480px;
     width: 90%;
     margin: auto;
     display: flex;
@@ -152,8 +150,8 @@ button:focus-visible {
 }
 
 .personaje img {
-    width: 250px;
-    height: 280px;
+    width: 310px;
+    height: 350px;
     object-fit: cover;
     border: 9px solid white;
     border-radius: 45%;
@@ -250,8 +248,8 @@ button:focus-visible {
 }
 
 .foto-sobre-mi img {
-    width: 220px;
-    height: 300px;
+    width: 290px;
+    height: 390px;
     object-fit: cover;
     border: 8px solid white;
     border-radius: 12px;
@@ -278,6 +276,7 @@ button:focus-visible {
     margin: auto;
     text-align: center;
     padding-bottom: 100px;
+    scroll-margin-top: 25px;
 }
 
 .proyectos h2 {
@@ -346,7 +345,7 @@ button:focus-visible {
 .contacto {
     width: 90%;
     margin: 40px auto 60px;
-    min-height: 350px;
+    min-height: 390px;
     background: var(--rosa-pastel);
     border-radius: 180px;
     box-shadow: 0 4px 12px #0003;
@@ -354,6 +353,7 @@ button:focus-visible {
     align-items: center;
     justify-content: center;
     position: relative;
+    scroll-margin-top: 25px;
 }
 
 .contenido-contacto {
@@ -404,8 +404,8 @@ button:focus-visible {
     position: absolute;
     left: -10px;
     bottom: 25px;
-    width: 190px;
-    height: 220px;
+    width: 240px;
+    height: 270px;
     object-fit: cover;
     border: 8px solid white;
     border-radius: 50%;
@@ -433,6 +433,7 @@ button:focus-visible {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 .pie p {
@@ -447,17 +448,22 @@ button:focus-visible {
 .redes {
     display: flex;
     gap: 15px;
+    flex-wrap: wrap;
 }
 
 .redes a {
-    width: 60px;
+    min-width: 130px;
     height: 50px;
+    padding: 8px 18px;
     border: 1px solid var(--rosa);
     border-radius: 30px;
     color: var(--morado);
-    display: grid;
-    place-items: center;
-    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Fredoka', sans-serif;
+    font-size: 17px;
     transition: background 0.3s, color 0.3s;
 }
 
@@ -491,6 +497,11 @@ button:focus-visible {
 
     .contenido-contacto {
         width: 75%;
+    }
+
+    .avatar-contacto {
+        width: 190px;
+        height: 220px;
     }
 
 }
@@ -560,8 +571,8 @@ button:focus-visible {
     }
 
     .personaje img {
-        width: 210px;
-        height: 240px;
+        width: 250px;
+        height: 280px;
     }
 
     .decoracion {
@@ -587,8 +598,8 @@ button:focus-visible {
     }
 
     .foto-sobre-mi img {
-        width: 200px;
-        height: 260px;
+        width: 250px;
+        height: 320px;
     }
 
     /* PROYECTOS */
@@ -631,8 +642,8 @@ button:focus-visible {
     }
 
     .avatar-contacto {
-        width: 100px;
-        height: 125px;
+        width: 110px;
+        height: 135px;
         left: -10px;
         bottom: -15px;
     }
@@ -671,6 +682,16 @@ button:focus-visible {
         flex-wrap: wrap;
         gap: 15px;
         justify-content: center;
+    }
+
+    .redes {
+        justify-content: center;
+    }
+
+    .redes a {
+        min-width: 110px;
+        font-size: 14px;
+        padding: 8px 12px;
     }
 
 }
