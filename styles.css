@@ -1,4 +1,7 @@
-/* COLORES PRINCIPALES */
+
+/* =========================================
+   COLORES PRINCIPALES
+========================================= */
 
 :root {
     --rosa: #D94F8D;
@@ -7,9 +10,12 @@
     --naranja: #F5A019;
     --morado: #790C58;
     --blanco: #FFFFFF;
+    --texto: #422D39;
 }
 
-/* CONFIGURACIÓN GENERAL */
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
 
 * {
     margin: 0;
@@ -19,19 +25,41 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 25px;
 }
 
 body {
-    background: white;
+    background: var(--blanco);
     font-family: 'DM Sans', sans-serif;
-    color: #422D39;
+    color: var(--texto);
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    display: block;
 }
 
 a {
     text-decoration: none;
 }
 
-/* ENCABEZADO */
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+/* ACCESIBILIDAD: ENFOQUE CON TECLADO */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--morado);
+    outline-offset: 5px;
+}
+
+/* =========================================
+   ENCABEZADO
+========================================= */
 
 .encabezado {
     width: 92%;
@@ -39,6 +67,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 .logo {
@@ -60,17 +89,18 @@ a {
 
 .menu {
     display: flex;
+    align-items: center;
     gap: 15px;
 }
 
 .menu a {
     background: var(--rosa);
-    color: white;
+    color: var(--blanco);
     padding: 10px 28px;
     border-radius: 40px;
     font-family: 'Fredoka', sans-serif;
     font-size: 22px;
-    transition: 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .menu a:hover {
@@ -82,7 +112,9 @@ a {
     display: none;
 }
 
-/* PORTADA */
+/* =========================================
+   PORTADA
+========================================= */
 
 .portada {
     min-height: 440px;
@@ -99,7 +131,7 @@ a {
     font-family: 'Fredoka', sans-serif;
     color: var(--rosa);
     font-size: clamp(75px, 11vw, 130px);
-    line-height: 0.75;
+    line-height: 0.85;
     text-align: center;
     transform: rotate(-4deg);
     text-shadow: 4px 5px white, 7px 8px #D9C7D0;
@@ -150,7 +182,8 @@ a {
 .decoracion {
     position: absolute;
     font-size: 130px;
-    z-index: -1;
+    z-index: 0;
+    pointer-events: none;
 }
 
 .naranja {
@@ -171,9 +204,12 @@ a {
     right: 42%;
     color: var(--morado);
     font-size: 70px;
+    pointer-events: none;
 }
 
-/* SOBRE MÍ */
+/* =========================================
+   SOBRE MÍ
+========================================= */
 
 .sobre-mi {
     width: 88%;
@@ -188,7 +224,7 @@ a {
     background: var(--rosa-pastel);
     padding: 30px;
     border-radius: 15px;
-    line-height: 1.35;
+    line-height: 1.5;
     font-size: 14px;
     position: relative;
 }
@@ -204,6 +240,10 @@ a {
     margin-bottom: 15px;
 }
 
+.texto-sobre-mi p:last-child {
+    margin-bottom: 0;
+}
+
 .foto-sobre-mi {
     position: relative;
     text-align: center;
@@ -217,6 +257,7 @@ a {
     border-radius: 12px;
     box-shadow: 0 5px 15px #0004;
     transform: rotate(7deg);
+    margin: auto;
 }
 
 .estrella-foto {
@@ -225,9 +266,12 @@ a {
     left: 10%;
     font-size: 75px;
     color: var(--naranja);
+    pointer-events: none;
 }
 
-/* PROYECTOS */
+/* =========================================
+   PROYECTOS
+========================================= */
 
 .proyectos {
     width: 92%;
@@ -255,7 +299,7 @@ a {
     background: var(--rosa);
     overflow: hidden;
     border-radius: 5px;
-    transition: 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .proyecto.grande {
@@ -266,11 +310,16 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.4s;
 }
 
 .proyecto:hover {
     transform: scale(1.04);
     box-shadow: 0 8px 20px #D94F8D55;
+}
+
+.proyecto:hover img {
+    transform: scale(1.04);
 }
 
 .boton-vermas {
@@ -282,7 +331,7 @@ a {
     border-radius: 40px;
     font-family: 'Fredoka', sans-serif;
     font-size: 30px;
-    transition: 0.3s;
+    transition: background 0.3s, color 0.3s;
 }
 
 .boton-vermas:hover {
@@ -290,7 +339,9 @@ a {
     color: white;
 }
 
-/* CONTACTO */
+/* =========================================
+   CONTACTO
+========================================= */
 
 .contacto {
     width: 90%;
@@ -308,6 +359,7 @@ a {
 .contenido-contacto {
     width: 65%;
     padding: 35px;
+    min-width: 0;
 }
 
 .contenido-contacto h2 {
@@ -323,21 +375,29 @@ a {
     align-items: center;
     gap: 12px;
     margin: 12px 0;
-    color: white;
+    color: var(--texto);
     font-weight: bold;
     font-size: 15px;
+    min-width: 0;
 }
 
 .contenido-contacto a span:last-child {
     background: var(--rosa);
+    color: white;
     padding: 7px 13px;
     border-radius: 10px;
     overflow-wrap: anywhere;
+    min-width: 0;
+}
+
+.contenido-contacto a:hover span:last-child {
+    background: var(--morado);
 }
 
 .icono {
-    color: var(--rosa);
+    color: var(--morado);
     font-size: 30px;
+    flex-shrink: 0;
 }
 
 .avatar-contacto {
@@ -359,9 +419,12 @@ a {
     bottom: -25px;
     font-size: 100px;
     color: var(--rosa);
+    pointer-events: none;
 }
 
-/* PIE DE PÁGINA */
+/* =========================================
+   PIE DE PÁGINA
+========================================= */
 
 .pie {
     width: 90%;
@@ -376,7 +439,7 @@ a {
     border: 1px solid var(--rosa);
     padding: 12px 25px;
     border-radius: 30px;
-    color: var(--rosa);
+    color: var(--morado);
     font-family: 'Fredoka', sans-serif;
     font-size: 20px;
 }
@@ -391,10 +454,11 @@ a {
     height: 50px;
     border: 1px solid var(--rosa);
     border-radius: 30px;
-    color: var(--rosa);
+    color: var(--morado);
     display: grid;
     place-items: center;
     font-size: 30px;
+    transition: background 0.3s, color 0.3s;
 }
 
 .redes a:hover {
@@ -402,12 +466,53 @@ a {
     color: white;
 }
 
-/* RESPONSIVE: CELULARES Y TABLETS */
+/* =========================================
+   RESPONSIVE: TABLETS
+========================================= */
+
+@media (max-width: 900px) {
+
+    .encabezado {
+        width: 94%;
+    }
+
+    .menu a {
+        padding: 9px 18px;
+        font-size: 19px;
+    }
+
+    .sobre-mi {
+        gap: 30px;
+    }
+
+    .contenedor-proyectos {
+        gap: 15px;
+    }
+
+    .contenido-contacto {
+        width: 75%;
+    }
+
+}
+
+/* =========================================
+   RESPONSIVE: CELULARES
+========================================= */
 
 @media (max-width: 760px) {
 
     .encabezado {
+        width: 90%;
         flex-wrap: wrap;
+        margin: 20px auto;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .logo small {
+        font-size: 18px;
     }
 
     .menu-toggle {
@@ -415,7 +520,7 @@ a {
         background: var(--rosa);
         color: white;
         border: none;
-        padding: 10px;
+        padding: 10px 15px;
         border-radius: 10px;
         font-size: 22px;
     }
@@ -424,6 +529,7 @@ a {
         display: none;
         width: 100%;
         flex-direction: column;
+        gap: 10px;
     }
 
     .menu.activo {
@@ -431,24 +537,74 @@ a {
     }
 
     .menu a {
+        width: 100%;
         text-align: center;
     }
 
+    /* PORTADA */
+
     .portada {
+        width: 95%;
         flex-direction: column;
+        justify-content: center;
         padding: 45px 0;
         gap: 40px;
     }
 
-    .sobre-mi {
-        grid-template-columns: 1fr;
+    .titulo-portada h1 {
+        font-size: clamp(65px, 16vw, 100px);
     }
 
-    .foto-sobre-mi {
-        padding: 20px;
+    .titulo-portada p {
+        font-size: 14px;
+    }
+
+    .personaje img {
+        width: 210px;
+        height: 240px;
+    }
+
+    .decoracion {
+        font-size: 85px;
+    }
+
+    .sticker {
+        font-size: 50px;
+        right: 10%;
+    }
+
+    /* SOBRE MÍ */
+
+    .sobre-mi {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin: 35px auto 65px;
+    }
+
+    .texto-sobre-mi {
+        padding: 25px;
+    }
+
+    .foto-sobre-mi img {
+        width: 200px;
+        height: 260px;
+    }
+
+    /* PROYECTOS */
+
+    .proyectos {
+        width: 92%;
+        padding-bottom: 65px;
+    }
+
+    .proyectos h2 {
+        font-size: 45px;
+        margin-bottom: 25px;
     }
 
     .contenedor-proyectos {
+        grid-template-columns: 1fr 1.1fr 1fr;
         gap: 8px;
     }
 
@@ -460,21 +616,30 @@ a {
         height: 230px;
     }
 
+    .boton-vermas {
+        font-size: 23px;
+        padding: 10px 45px;
+    }
+
+    /* CONTACTO */
+
     .contacto {
         width: 95%;
+        min-height: 300px;
         border-radius: 70px 70px 30px 30px;
-        padding: 30px 5px 30px 80px;
+        padding: 35px 15px;
     }
 
     .avatar-contacto {
-        width: 120px;
-        height: 150px;
-        left: -15px;
+        width: 100px;
+        height: 125px;
+        left: -10px;
+        bottom: -15px;
     }
 
     .contenido-contacto {
         width: 100%;
-        padding: 15px;
+        padding: 15px 10px 15px 65px;
     }
 
     .contenido-contacto h2 {
@@ -490,11 +655,88 @@ a {
         padding: 6px;
     }
 
+    .icono {
+        font-size: 23px;
+    }
+
+    .estrella-contacto {
+        font-size: 65px;
+        right: -8px;
+        bottom: -20px;
+    }
+
+    /* PIE DE PÁGINA */
+
     .pie {
         flex-wrap: wrap;
         gap: 15px;
         justify-content: center;
     }
+
 }
 
+/* =========================================
+   RESPONSIVE: CELULARES PEQUEÑOS
+========================================= */
 
+@media (max-width: 400px) {
+
+    .titulo-portada h1 {
+        font-size: 65px;
+    }
+
+    .texto-sobre-mi {
+        padding: 20px;
+        font-size: 13px;
+    }
+
+    .contenedor-proyectos {
+        gap: 5px;
+    }
+
+    .proyecto {
+        height: 125px;
+    }
+
+    .proyecto.grande {
+        height: 185px;
+    }
+
+    .contenido-contacto {
+        padding-left: 55px;
+    }
+
+    .contenido-contacto h2 {
+        font-size: 29px;
+    }
+
+    .contenido-contacto a {
+        font-size: 10px;
+    }
+
+    .avatar-contacto {
+        width: 85px;
+        height: 110px;
+    }
+
+}
+
+/* =========================================
+   ACCESIBILIDAD: MOVIMIENTO REDUCIDO
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
